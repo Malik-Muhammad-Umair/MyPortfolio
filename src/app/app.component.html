@@ -1,0 +1,49 @@
+<div class="div flex justify-between items-center px-6" id="top">
+  <div class="menu">
+
+    <i class="bx bx-menu font-extrabold text-green-400 text-3xl p-4 rounded-md cursor-pointer" (click)="addanimation()"
+      id="btn">
+    </i>
+  </div>
+  <div class="darkmode">
+ <button class="theme__icon" (click)="toggleTheme()">
+  @if(!isDark){
+
+    <i class='bx bx-moon'></i>     <!-- Dark mode icon -->
+  }
+  @else{
+    
+    <i  class='bx bx-sun'></i>     <!-- Light mode icon -->
+  }
+</button>
+  </div>
+</div>
+
+
+<div
+  class="ab ani absolute bg-black border-r-2   text-white w-78    z-999 sm:w-1/2 flex flex-col h h-full items-center justify-center -translate-x-176 lg:w-1/3">
+  <div class="self-end p-4">
+    <i class='bx bxs-x-square pt-20 text-green-400 text-4xl font-extrabold rounded-md cursor-pointer'
+      (click)="closebar()" id="btn2"></i>
+  </div>
+
+  <nav class="flex-1 flex flex-col justify-center items-center w-full mb-45  ">
+    <ul class="flex flex-col gap-8 text-center ">
+      <img src="umair.png" alt="img" class="rounded-full  relative left-6 lg:left-0 w-26 h-26 object-cover">
+      <li class="border-b-4 text-3xl animate-pulse font-bold lg:text-xl border-green-400"><a routerLink="home"
+        (click)="closebar()">Home</a></li>
+
+      <li class="border-b-4 text-3xl lg:text-xl  font-bold border-green-400 animate-pulse "><a routerLink="about"
+          (click)="closebar()">About</a></li>
+      <li class="border-b-4 text-3xl  font-bold lg:text-xl border-green-400 animate-pulse "><a routerLink="experience"
+          (click)="closebar()">Experience</a></li>
+          <li class="border-b-4 text-3xl  font-bold lg:text-xl border-green-400 animate-pulse "><a routerLink="project"
+              (click)="closebar()">Projects</a></li>
+      <li class="border-b-4 text-3xl  font-bold lg:text-xl border-green-400 animate-pulse "><a routerLink="contact"
+          (click)="closebar()">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>
+<app-footer ></app-footer>
